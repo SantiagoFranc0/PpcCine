@@ -1,0 +1,122 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el navegador */
+.navegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px;
+}
+
+.navegador img {
+    width: 100px;
+    height: auto;
+}
+
+.navegador ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navegador ul li {
+    color: #ffffff;
+}
+
+.navegador select {
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para la sección principal */
+.principal {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.principal .cartelera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.texto {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Estilos para las películas */
+.pelicula {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 200px;
+    text-align: center;
+}
+
+.pelicula img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.pelicula img:hover {
+    transform: scale(1.1);
+}
+
+.titulos {
+    margin-top: 10px;
+    color: #2a2a2a;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.titulos:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .pelicula {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .pelicula {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .navegador ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navegador img {
+        width: 80px;
+    }
+}
+

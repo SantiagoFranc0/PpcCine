@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/cinema.css">
+    <title>Cinema</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navegador">
+
+            <img src="imagenes/logo 2 redondo light.png" alt="Logo" value="index.html">
+
+            <ul>
+                <li>
+                    <select name="generos" id="generos" onchange="window.location.href=this.value;">
+                        <option value="">Géneros</option>
+                        <option value="Accion.html">Acción</option>
+                        <option value="Terror.html">Terror</option>
+                        <option value="Infantiles.html">Infantil</option>
+                        <option value="Drama.html">Drama</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="principal">
+        <h1 class="texto"> Grandes éxitos </h1>
+        <div class="cartelera">
+            <div class="pelicula">
+                <a href="Accion.html">
+                    <img class="imagen" src="imagenes/Pelicula2.jpg" alt="Planeta de los Simios">
+                    <h2 class="titulos">Planeta de los Simios</h2>
+                </a>
+            </div>
+            <div class="pelicula">
+                <a href="Drama.html">
+                    <img class="imagen" src="imagenes/Aladdin.jpg" alt="Aladdín">
+                    <h2 class="titulos">Aladdín</h2>
+                </a>
+            </div>
+            <div class="pelicula">
+                <a href="Terror.html">
+                    <img class="imagen" src="imagenes/Inmaculada.jpg" alt="Inmaculada">
+                    <h2 class="titulos">Inmaculada</h2>
+                </a>
+            </div>
+            <div class="pelicula">
+                <a href="Infantiles.html">
+                    <img class="imagen" src="imagenes/KFP.jpg" alt="Kung Fu Panda">
+                    <h2 class="titulos">Kung Fu Panda</h2>
+                </a>
+            </div>
+        </div>
+    </div>  
+    <footer>
+        <img class="logo" src="imagenes/logo 2 redondo dark.png" alt="Logo_Footer">
+    </footer>
+</body>
+</html>

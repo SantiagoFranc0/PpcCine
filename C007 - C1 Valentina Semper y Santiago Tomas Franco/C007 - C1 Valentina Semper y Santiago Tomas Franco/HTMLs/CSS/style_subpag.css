@@ -1,0 +1,217 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px;
+}
+
+.nav img {
+    height: 95px;
+    width: 103px;
+    margin: 0;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+/* Contenedor de select */
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.select-container select {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 30px 10px 10px;
+    color: #333333;
+}
+
+.select-container:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333333;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+.principal {
+    padding: 30px;
+}
+
+.principal h1 {
+    color: #001060;
+    margin-bottom: 20px;
+}
+
+.principal .titulos {
+    margin-top: 40px;
+}
+
+.principal .imagen {
+    width: 300px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin-bottom: 20px; /* Espacio inferior entre la imagen y otros elementos */
+}
+
+.principal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.principal th {
+    background-color:  #7d6161;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+.principal td {
+    padding: 5px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.principal td:nth-child(2) {
+    text-transform: capitalize;
+}
+
+.principal a {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
+.principal a:hover {
+    color: #ffffff;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2a2a2a;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Opiniones */
+.opiniones {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.opiniones label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.opiniones input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.opiniones button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7d6161;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.opiniones button:hover {
+    background-color: #444;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .nav img {
+        height: 80px;
+        width: 87px;
+    }
+
+    .principal .imagen {
+        width: 150px;
+        height: 225px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav img {
+        margin-bottom: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .principal {
+        padding: 20px;
+    }
+
+    .principal .imagen {
+        width: 100px;
+        height: 150px;
+    }
+}

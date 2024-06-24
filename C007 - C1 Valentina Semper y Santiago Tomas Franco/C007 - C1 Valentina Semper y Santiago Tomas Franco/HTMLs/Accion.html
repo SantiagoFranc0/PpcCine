@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style_subpag.css">
+    <title>Películas De Acción</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="Cinema.html">
+                <img src="imagenes/logo 2 redondo light.png" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="Cinema.html">Grandes éxitos</a></li>
+                <li>
+                    <div class="select-container">
+                        <select name="generos" id="generos" onchange="window.location.href=this.value;">
+                            <option value="">Géneros</option>
+                            <option value="Accion.html">Acción</option>
+                            <option value="Terror.html">Terror</option>
+                            <option value="Infantiles.html">Infantil</option>
+                            <option value="Drama.html">Drama</option>
+                            <option value="Cinema.html">Pagina principal</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="principal">
+        <h1>Formulario de Reserva</h1>
+        <form id="compra">
+            <div>
+                <label class="compra" for="nombre">Nombre:</label>
+                <input class="compra" type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label class="compra" for="email">Email o Celular:</label>
+                <input class="compra" type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label class="compra" for="fecha">Fecha</label>
+                <select class="compra" id="fecha" name="fecha">
+                    <option value="15 de mayo">15 de mayo</option>
+                    <option value="18 de mayo">18 de mayo</option>
+                    <option value="25 de mayo">25 de mayo</option>
+                    <option value="30 de mayo">30 de mayo</option>
+                    <option value="5 de junio">5 de junio</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="hora">Hora</label>
+                <select class="compra" id="hora" name="hora">
+                    <option value="11:00">11:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="15:15">15:15</option>
+                    <option value="17:00">17:00</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="compra" for="idioma">Idioma</label>
+                <select class="compra" id="idioma" name="idioma">
+                    <option value="Español">Español</option>
+                    <option value="SubEspañol">SubEspañol</option>
+                </select>
+
+                <div class="captcha-container">
+                    <span id="numero1"></span> +
+                    <span id="numero2"></span> =
+                    <input type="text" id="captcha-respuesta" required>
+                    <p id="mensajeError" class="mensaje-error"></p>
+                </div>
+
+                <button id="miBoton">Comprar</button>
+            </div>
+        </form>
+
+        <h1 class="titulos">El Planeta de los Simios</h1>
+        <img class="imagen" src="imagenes/Pelicula2.jpg" alt="El Planeta de los Simios">
+
+        <aside class="sidebar">
+            <ul id="datosPersonales">
+                <h1>Información de la Reserva</h1>
+                <p> Aún no has hecho una reserva. ¿Qué esperas?</p>
+                <li id="nombre">Comprador:</li>
+                <li id="email">Contacto:</li>
+                <li id="fecha">Fecha:</li>
+                <li id="hora">Hora:</li>
+                <li id="idioma">Idioma:</li>
+            </ul>
+        </aside>
+
+        <table id="tabla_accion" class="tablaPeliculas">
+            <thead>
+                <tr>
+                    <th>Nombre de la película</th>
+                    <th>Edad</th>
+                    <th>Duración</th>
+                    <th>Sinopsis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Planeta de los Simios</td>
+                    <td>+13</td>
+                    <td>145 mins</td>
+                    <td>Situada varias generaciones en el futuro tras el reinado de César, los simios son la especie
+                        dominante que vive en armonía y los humanos han quedado reducidos a vivir en las sombras.
+                        Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un viaje
+                        desgarrador que le llevará a cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones
+                        que definirán el futuro de simios y humanos por igual.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Opiniones sobre Películas de Acción</h1>
+        <table id="tabla_opiniones" class="tablaOpiniones">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Id</th>
+                    <th>Edad</th>
+                    <th>Pelicula</th>
+                    <th>Opinion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se cargarán dinámicamente las opiniones -->
+            </tbody>
+        </table>
+        <div>
+            <form class="opiniones" id="opinionForm">
+                <div>
+                    <input type="text" id="nombreinput" placeholder="Nombre" required>
+                </div>
+                <div>
+                    <input type="text" id="edadinput" placeholder="Edad" required>
+                </div>
+                <div>
+                    <input type="text" id="peliculainput" placeholder="Pelicula" required>
+                </div>
+                <div>
+                    <input type="text" id="opinioninput" placeholder="Su opinion" required>
+                </div>
+                <button type="submit" id="miBoton">Postear Opinión</button>
+
+
+            </form>
+        </div>
+        <div class="opiniones">
+            <input type="text" id="filaquitar" placeholder="ID de la opinión a eliminar">
+            <button id="quitar">Eliminar</button>
+
+            <input type="text" id="filaeditar" placeholder="ID de la opinión a editar">
+            <button id="editar">Editar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PoPcC Cinemaweb Productions</p>
+    </footer>
+
+    <script src="JavaScripts/Pelis.js"></script>
+    <script src="JavaScripts/Compra.js"></script>
+</body>
+
+</html>
